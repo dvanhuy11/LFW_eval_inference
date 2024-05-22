@@ -1,4 +1,8 @@
 # LFW_compare   
+## Link enrollment.json 
+```bash
+https://drive.google.com/file/d/1gIHuy0OE-dd06MujYM9TDlnYo0-si--O/view?usp=drive_link
+```
 ## Pipeline   
 - Tạo tập đăng ký từ những hình ảnh đầu tiên của từng người ( bao gồm nhận diện khuôn mặt [mtcnn] , và rút trích đặc trưng sau đó embedding )
 - So sánh:
