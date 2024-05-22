@@ -1,1 +1,16 @@
-# LFW_compare
+# LFW_compare   
+## Pipeline   
+- Tạo tập đăng ký từ những hình ảnh đầu tiên của từng người ( bao gồm nhận diện khuôn mặt [mtcnn] , và rút trích đặc trưng sau đó embedding )
+- So sánh:
+  - Duyệt qua từng folder_person: Những hình ảnh chưa được đăng ký sẽ được chọn để so sánh.   
+  - Nhận diện khuôn mặt, rút trích đặc trưng và embedding.
+  - Tính Cosine của ảnh đó với tập đăng ký ( 1-n ) . Có nghĩa là lấy hình ảnh hiện tại để thực hiện phép tính cosine với từng người đã được thêm vào tập đăng ký.
+## Scripts
+### Create Enrollment
+```bash
+python3 /media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/LFW_evaluate/util/create_enrollment.py
+```
+### Compare 
+```bash
+python3 /media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/LFW_evaluate/util/compare.py
+```
