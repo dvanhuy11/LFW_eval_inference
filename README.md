@@ -1,4 +1,8 @@
-# LFW_compare   
+# LFW_compare  
+## LFW Download
+```bash
+http://vis-www.cs.umass.edu/lfw/#download
+```
 ## Link enrollment.json 
 ```bash
 https://drive.google.com/file/d/1gIHuy0OE-dd06MujYM9TDlnYo0-si--O/view?usp=drive_link
