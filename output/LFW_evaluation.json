@@ -1,0 +1,47 @@
+{
+    "0": {
+        "0_2": {
+            "name": "Aaron_Peirsol",
+            "score": 0.8281519673289962
+        },
+        "0_3": {
+            "name": "Aaron_Peirsol",
+            "score": 0.7675021044225062
+        },
+        "0_4": {
+            "name": "Aaron_Peirsol",
+            "score": 0.5632519394234585
+        }
+    },
+    "1": {
+        "1_0": {
+            "name": "Abdel_Aziz_Al-Hakim",
+            "score": 0.9999999929672856
+        }
+    },
+    "2": {
+        "2_2": {
+            "name": "Abdoulaye_Wade",
+            "score": 0.7150508719855322
+        },
+        "2_3": {
+            "name": "Abdoulaye_Wade",
+            "score": 0.5347246243959716
+        },
+        "2_4": {
+            "name": "Abdoulaye_Wade",
+            "score": 0.6759912676025209
+        }
+    },
+    "3": {
+        "3_0": {
+            "name": "Abdul_Rahman",
+            "score": 0.9999999906367687
+        }
+    },
+    "accuracy": 0.875,
+    "TP": 7,
+    "FP": 0,
+    "TN": 0,
+    "FN": 1
+}
