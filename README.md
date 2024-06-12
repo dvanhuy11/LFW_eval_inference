@@ -21,5 +21,5 @@ python3 /media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/LFW_evaluate/util/create_e
 ```
 ### Compare 
 ```bash
-python3 /media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/LFW_evaluate/util/compare.py
+python3 /media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/LFW_evaluate/util/eval_LFW.py
 ```
