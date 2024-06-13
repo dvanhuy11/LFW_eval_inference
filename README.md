@@ -22,7 +22,7 @@ https://drive.google.com/file/d/1DY9YbUVzC3G4_RS-9rhDsuJOyJTQY3lQ/view?usp=drive
   - Tính Cosine của ảnh đó với tập đăng ký ( 1-n ) . Có nghĩa là lấy hình ảnh hiện tại để thực hiện phép tính cosine với từng người đã được thêm vào tập đăng ký.
 ## Scripts
 ### Create Enrollment
-Tất cả được chạy trên server 7gb GPU và 31gb CPU
+Tất cả được chạy trên server VAST.HPC
 ```bash
 python3 /media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/LFW_evaluate/util/create_enrollment.py
 ```
