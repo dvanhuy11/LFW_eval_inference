@@ -7,8 +7,12 @@ http://vis-www.cs.umass.edu/lfw/#download
 ```bash
 https://drive.google.com/file/d/1gIHuy0OE-dd06MujYM9TDlnYo0-si--O/view?usp=drive_link
 ```
+## Link kết quả đánh giá LFW
+```bash
+https://drive.google.com/file/d/1DY9YbUVzC3G4_RS-9rhDsuJOyJTQY3lQ/view?usp=drive_link
+```
 ## Pipeline   
-- Tạo tập đăng ký từ những hình ảnh đầu tiên của từng người ( bao gồm nhận diện khuôn mặt [mtcnn] , và rút trích đặc trưng sau đó embedding )
+- Tạo tập đăng ký từ những hình ảnh đầu tiên của từng người ( bao gồm nhận diện khuôn mặt [MTCNN] , và rút trích đặc trưng [VGGFace2] sau đó embedding )
 - So sánh:
   - Duyệt qua từng folder_person: Những hình ảnh chưa được đăng ký sẽ được chọn để so sánh.   
   - Nhận diện khuôn mặt, rút trích đặc trưng và embedding.
@@ -23,3 +27,6 @@ python3 /media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/LFW_evaluate/util/create_e
 ```bash
 python3 /media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/LFW_evaluate/util/eval_LFW.py
 ```
+### Kết quả 
+- Quá trình đánh giá diễn ra 6:40 phút
+![image](https://github.com/dvanhuy11/LFW_compare/assets/76443374/09fa0c6f-e745-4e99-b62c-237da6c4583f)
