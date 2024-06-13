@@ -1,4 +1,7 @@
 # LFW_compare  
+- Quá trình đánh giá diễn ra 6:40 phút
+![image](https://github.com/dvanhuy11/LFW_compare/assets/76443374/09fa0c6f-e745-4e99-b62c-237da6c4583f)
+
 ## LFW Download
 ```bash
 http://vis-www.cs.umass.edu/lfw/#download
@@ -27,6 +30,3 @@ python3 /media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/LFW_evaluate/util/create_e
 ```bash
 python3 /media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/LFW_evaluate/util/eval_LFW.py
 ```
-### Kết quả 
-- Quá trình đánh giá diễn ra 6:40 phút
-![image](https://github.com/dvanhuy11/LFW_compare/assets/76443374/09fa0c6f-e745-4e99-b62c-237da6c4583f)
