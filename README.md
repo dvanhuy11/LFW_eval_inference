@@ -22,13 +22,13 @@ https://drive.google.com/file/d/1v8pmbwhjOWNN2-bh4kxFHe9xLztUBDDw/view?usp=drive
 - Tạo tập đăng ký từ những hình ảnh đầu tiên của từng người ( bao gồm nhận diện khuôn mặt [MTCNN] , và rút trích đặc trưng [VGGFace2] sau đó embedding )
 - Lưu ý khi dùng MTCNN và VGGFace2
 ```bash
-# |  pip install tensorflow==2.12.1                                                            |
-# |  pip install keras==2.12                                                                   |
-# |                                                                                            |
-# |  I solved this issue by changing the import from                                           |
-# |     from keras.engine.topology import get_source_inputs                                    |
-# |  to                                                                                        |
-# |      from keras.utils.layer_utils import get_source_inputs in keras_vggface/models.py.
+   pip install tensorflow==2.12.1                                                            
+   pip install keras==2.12                                                                   
+                                                                                             
+   I solved this issue by changing the import from                                           
+      from keras.engine.topology import get_source_inputs                                    
+   to                                                                                        
+      from keras.utils.layer_utils import get_source_inputs in keras_vggface/models.py.
 ```
  
 - So sánh:
