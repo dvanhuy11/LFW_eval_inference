@@ -10,6 +10,11 @@ http://vis-www.cs.umass.edu/lfw/#download
 ```bash
 https://drive.google.com/file/d/1gIHuy0OE-dd06MujYM9TDlnYo0-si--O/view?usp=drive_link
 ```
+## Link enrollment cho Dlib dưới dạng pickle
+```bash
+https://drive.google.com/file/d/1Fg1caO9hrB__qt7aKFEea_Smmpj7uH--/view?usp=drive_link
+```
+
 ## Link kết quả đánh giá LFW
 ```bash
 https://drive.google.com/file/d/1DY9YbUVzC3G4_RS-9rhDsuJOyJTQY3lQ/view?usp=drive_link
