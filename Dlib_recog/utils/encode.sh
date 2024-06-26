@@ -1,0 +1,1 @@
+python3 /media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/Face-Recognition-with-OpenCV-Python-DL/utils/encode_faces.py -i /media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/Face-Recognition-with-OpenCV-Python-DL/dataset -e /media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/Face-Recognition-with-OpenCV-Python-DL/output/encodings.pickle
