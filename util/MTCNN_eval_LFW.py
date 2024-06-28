@@ -27,9 +27,8 @@ def load_data(filepath):
         labels = [entry['label'] for entry in data]
     return features, labels
 
-def extract_face(filename, required_size=(224, 224)):
+def extract_face(filename,detector, required_size=(224, 224)):
     pixels = pyplot.imread(filename)
-    detector = MTCNN()
     results = detector.detect_faces(pixels)
     detector = None  
     if results:
@@ -42,10 +41,9 @@ def extract_face(filename, required_size=(224, 224)):
         return face_array
     return None
 
-def get_embeddings(faces):
+def get_embeddings(faces,model):
     samples = asarray(faces, 'float32')
     samples = preprocess_input(samples, version=2)
-    model = VGGFace(model='resnet50', include_top=False, input_shape=(224, 224, 3), pooling='avg')
     return model.predict(samples, verbose=0)
 
 def save_results(metrics, comparisons, output_file_name):
@@ -59,17 +57,21 @@ def save_results(metrics, comparisons, output_file_name):
     results.update(comparisons)
     with open(output_file_name, 'w') as file:
         json.dump(results, file, indent=4, default=json_numpy_serializable)
-
+#load JSON
 enrollment_features, enrollment_labels = load_data('/media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/LFW_evaluate/output/enrollment_data.json')
 dataset_directory = '/media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/LFW_evaluate/lfw'
-output_file_name = '/media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/LFW_evaluate/output/LFW_evaluation1.json'
+output_file_name = '/media/divhuy/63ED6D5823380FB4/HUTECH/TTTN/w1/LFW_evaluate/output/LFW_evaluation.json'
+
+#load model
+detector = MTCNN()
+model = VGGFace(model='resnet50', include_top=False, input_shape=(224, 224, 3), pooling='avg')
+
 results_dict = {}
 metrics = {"accuracy": 0, "TP": 0, "FP": 0, "TN": 0, "FN": 0}
 comparisons = {}
-
 folder_name = sorted([os.path.join(dataset_directory, person) for person in os.listdir(dataset_directory) if os.path.isdir(os.path.join(dataset_directory, person))])
 
-batch_size = 3  # Adjust batch size based on your system's capability
+batch_size = 5  # Adjust batch size based on your system's capability
 for i in tqdm(range(0, len(folder_name), batch_size), desc="Processing batches"):
     batch_folders = folder_name[i:i+batch_size]
     all_faces = []
@@ -77,13 +79,13 @@ for i in tqdm(range(0, len(folder_name), batch_size), desc="Processing batches")
     for person_folder in batch_folders:
         images = [os.path.join(person_folder, img) for img in os.listdir(person_folder) if img.endswith('.jpg')]
         for image_path in images:
-            face = extract_face(image_path)
+            face = extract_face(image_path,detector)
             if face is not None:
                 all_faces.append(face)
                 image_paths.append(image_path)
 
     # Calculate embeddings and perform comparison for each batch
-    embeddings = get_embeddings(all_faces)
+    embeddings = get_embeddings(all_faces,model)
 
     for idx, (face_embedding, image_path) in enumerate(zip(embeddings, image_paths)):
         similarities = [1 - cosine(face_embedding, ef) for ef in enrollment_features]
